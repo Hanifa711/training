@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:note_app/logic/validator.dart';
+import '../logic/validator.dart';
 import '../widgets/auth_text_field.dart';
 import '../widgets/gradient_button.dart';
 import '../theme/app_colors.dart';
@@ -55,7 +55,7 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
                             color: AppColors.primary
                           ),
                       ),
-                      SizedBox(height:10.h,),
+                      SizedBox(height:14.h,),
                       Container(
                         padding: EdgeInsets.all(15.sp),
                         decoration: BoxDecoration(
@@ -73,7 +73,7 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
                           ),
                         ),
                       ),
-                      SizedBox(height:20.h,),
+                      SizedBox(height:40.h,),
                       AuthTextField(
                         hint: 'Email',
                         controller: _emailController,
@@ -81,7 +81,7 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
                         validator:Validators.email,
                       ),                     
                               
-                       SizedBox(height: 90.h),
+                       SizedBox(height: 50.h),
                               
                       GradientButton(
                         text: 'Send',

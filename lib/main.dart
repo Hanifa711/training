@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:note_app/screens/bordering.dart';
-import 'package:note_app/screens/forget_password.dart';
-import 'package:note_app/screens/login_screen.dart';
-import 'package:note_app/screens/set_new_password.dart';
-import 'package:note_app/screens/verify.dart';
+import '../screens/bordering.dart';
+import '../screens/forget_password.dart';
+import '../screens/login_screen.dart';
+import '../screens/set_new_password.dart';
+import '../screens/signup.dart';
+import '../screens/verify.dart';
 import 'screens/splash_screen.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -29,9 +30,10 @@ class MyApp extends StatelessWidget {
       ),
         initialRoute: '/',
         routes: {
-            '/': (context) => const SplashScreen(),
+        '/': (context) => const SplashScreen(),
         '/bordering': (context) => const BorderingScreen(),
         '/sign_in': (context) => const LoginScreen(),
+        '/sign_up': (context) => const SignUpScreen(),
         '/verify': (context) => const VerifyScreen(),
         '/forgetpassword': (context) => const  ForgetPasswordScreen(),
         '/setnewpassword': (context) => const  SetNewPasswordScreen()

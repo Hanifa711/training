@@ -22,7 +22,7 @@ class StatrtedButton extends StatelessWidget {
                           ),
                       ),),
                       decoration: BoxDecoration(
-                        color: const Color.fromARGB(57, 255, 255, 255),
+                        color: const Color.fromARGB(94, 255, 255, 255),
                         borderRadius: BorderRadius.circular(30)
                       ),
 

@@ -3,16 +3,15 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../logic/validator.dart';
 import '../widgets/auth_text_field.dart';
 import '../widgets/gradient_button.dart';
-import '../theme/app_colors.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+class SignUpScreen extends StatefulWidget {
+  const SignUpScreen({super.key});
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<SignUpScreen> createState() => _SignUpScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _SignUpScreenState extends State<SignUpScreen> {
   final _formKey = GlobalKey<FormState>();
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
@@ -78,62 +77,31 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                       ),
                               
-                      SizedBox(height: 30.h),
-                              
-                      TextButton(
-                        onPressed: () {
-                          Navigator.pushNamed(context, '/forgetpassword');
-                          
-                        },
-                        child:  Text(
-                          'FORGOT PASSWORD',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: AppColors.primary,
-                            fontWeight: FontWeight.w600,
-                            fontSize: 14.sp
-                          ),
-                        ),
-                      ),
-                              
-                       SizedBox(height: 30.h),
+                      SizedBox(height: 100.h),
                               
                       GradientButton(
-                        text: 'LOG IN',
+                        text: 'SIGN IN',
                         onPressed: () {
                           if (_formKey.currentState!.validate()) {
                            Navigator.pushNamed(context, '/verify');
+
                           }
                         },
                       ),
                               
                       SizedBox(height: 40.h),
-                              
-                      const Text('OR LOG IN BY'),
-                              
-                      const SizedBox(height: 15),
-                              
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
-                          CircleAvatar(child: Icon(Icons.g_mobiledata)),
-                          SizedBox(width: 20),
-                          CircleAvatar(child: Icon(Icons.facebook_outlined)),
-                        ],
-                      ),
-                              
-                      const SizedBox(height: 15),
-                              
+                                                            
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          const Text("Don't have account? "),
+                          const Text("You have account? "),
                           TextButton(
                             onPressed: () {
-                              Navigator.pushNamed(context, '/sign_up');
+                               Navigator.pushNamed(context, '/sign_in');
+
                             },
                             child: const Text(
-                              'SIGN UP',
+                              'LOG IN',
                               style: TextStyle(fontWeight: FontWeight.bold),
                             ),
                           )

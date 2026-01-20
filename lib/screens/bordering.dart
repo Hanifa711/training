@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:note_app/widgets/started_button.dart';
+import '../widgets/started_button.dart';
 
 class BorderingScreen extends StatelessWidget {
   const BorderingScreen({super.key});
@@ -15,7 +15,7 @@ class BorderingScreen extends StatelessWidget {
         children: [
       SizedBox.expand(
        child: Image.asset(
-           'assets/images/dark_background.png',
+           'assets/images/back.png',
            fit: BoxFit.cover,
          ),
      ),
@@ -35,22 +35,21 @@ class BorderingScreen extends StatelessWidget {
                             color: Colors.white
                           ),
                   ),
-                  SizedBox(height: size.height*.05,),
+                  SizedBox(height: 32.h,),
                 Image.asset(
            'assets/images/dimond.png',
            fit: BoxFit.cover,
          ),
          SizedBox(height: size.height*.02,),
-         const Text(
+          Text(
                     'SHARE - INSPIRE - CONNECT',
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      fontSize: 12,
-                      fontFamily: 'Circular Std',
+                      fontSize: 14.sp,
                       color: Colors.white,
                     ),
                   ),
-                SizedBox(height:30.h,),
+                SizedBox(height:43.h,),
                 StatrtedButton()
                   
                 ],

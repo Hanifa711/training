@@ -48,7 +48,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
          child: ScaleTransition(
           scale: _scaleAnimation,
            child: Image.asset(
-               'assets/images/dark_background.png',
+               'assets/images/back.png',
                fit: BoxFit.cover,
              ),
          ),

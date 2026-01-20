@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:note_app/logic/validator.dart';
+import '../logic/validator.dart';
 import '../widgets/auth_text_field.dart';
 import '../widgets/gradient_button.dart';
 import '../theme/app_colors.dart';

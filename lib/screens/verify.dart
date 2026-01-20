@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:note_app/logic/validator.dart';
+import '../logic/validator.dart';
 import '../widgets/auth_text_field.dart';
 import '../widgets/gradient_button.dart';
 import '../theme/app_colors.dart';
@@ -55,7 +55,7 @@ class _VerifyScreenState extends State<VerifyScreen> {
                             color: AppColors.primary
                           ),
                       ),
-                      SizedBox(height:10.h,),
+                      SizedBox(height:14.h,),
                       Container(
                         padding: EdgeInsets.all(15.sp),
                         decoration: BoxDecoration(
@@ -73,18 +73,18 @@ class _VerifyScreenState extends State<VerifyScreen> {
                           ),
                         ),
                       ),
-                      SizedBox(height:20.h,),
+                      SizedBox(height:40.h,),
                       AuthTextField(
                         hint: 'Type verification code',
                         controller: _emailController,
                         keyboardType: TextInputType.emailAddress,
-                        validator:(v){},
+                        validator:Validators.notEmpty,
                       ),
                       SizedBox(height: 20.h),
                       TextButton(
                         onPressed: () {},
                         child:  Text(
-                          'Dont receive the code',
+                          "Don't receive the code",
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             color: AppColors.black,
@@ -105,7 +105,7 @@ class _VerifyScreenState extends State<VerifyScreen> {
                         },
                       ),
                               
-                       SizedBox(height: 65.h),
+                       SizedBox(height: 55.h),
                        Image.asset(
                          'assets/images/three_dimonds.png',
                          fit: BoxFit.cover,
