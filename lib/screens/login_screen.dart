@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:note_app/logic/validator.dart';
 import '../widgets/auth_text_field.dart';
 import '../widgets/gradient_button.dart';
@@ -20,22 +21,24 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
-        final size = MediaQuery.of(context).size;
 
     return Scaffold(
       body: Stack(
         fit: StackFit.expand,
         children: [
-          SizedBox(
-           // height: 50,
-            width: 150,
+          Positioned(
+             top: 0,
+            left: 0,
+            right: 0,
             child: Image.asset(
               'assets/images/login.png',
-             // fit: BoxFit.cover,
+              fit: BoxFit.cover,
+                height: 312.h,
+               width: 375.w,
             ),
           ),
           Positioned.fill(
-            top: size.height * 0.40,
+            top: 272.h,
             child: Container(
               decoration: BoxDecoration(
                 color: Colors.white,
@@ -47,14 +50,14 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
-                      SizedBox(height: size.height*.02,),
+                      SizedBox(height:40.h,),
                       AuthTextField(
                         hint: 'Email',
                         controller: _emailController,
                         keyboardType: TextInputType.emailAddress,
                         validator: Validators.email,
                       ),
-                      const SizedBox(height: 15),
+                      SizedBox(height: 20.h),
                               
                       AuthTextField(
                         hint: 'Password',
@@ -75,10 +78,13 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                       ),
                               
-                      const SizedBox(height: 10),
+                      SizedBox(height: 30.h),
                               
                       TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/forgetpassword');
+                          
+                        },
                         child: const Text(
                           'FORGOT PASSWORD',
                           textAlign: TextAlign.center,
@@ -89,13 +95,13 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                       ),
                               
-                      const SizedBox(height: 10),
+                       SizedBox(height: 30.h),
                               
                       GradientButton(
                         text: 'LOG IN',
                         onPressed: () {
                           if (_formKey.currentState!.validate()) {
-                           
+                           Navigator.pushNamed(context, '/verify');
                           }
                         },
                       ),
@@ -111,7 +117,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         children: const [
                           CircleAvatar(child: Icon(Icons.g_mobiledata)),
                           SizedBox(width: 20),
-                          CircleAvatar(child: Icon(Icons.facebook)),
+                          CircleAvatar(child: Icon(Icons.facebook_outlined)),
                         ],
                       ),
                               
@@ -122,7 +128,9 @@ class _LoginScreenState extends State<LoginScreen> {
                         children: [
                           const Text("Don't have account? "),
                           TextButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              
+                            },
                             child: const Text(
                               'SIGN UP',
                               style: TextStyle(fontWeight: FontWeight.bold),

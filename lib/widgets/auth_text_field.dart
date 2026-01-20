@@ -29,6 +29,7 @@ class AuthTextField extends StatelessWidget {
       autovalidateMode: AutovalidateMode.onUserInteraction,
       decoration: InputDecoration(
         hintText: hint,
+        hintStyle: TextStyle(color: Color(0xffBDBDBD)),
         filled: true,
         fillColor: AppColors.textGrey,
         suffixIcon: suffix,

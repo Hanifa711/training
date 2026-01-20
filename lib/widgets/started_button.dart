@@ -11,14 +11,18 @@ class StatrtedButton extends StatelessWidget {
                       Navigator.pushNamed(context, '/sign_in');
                     },
                     child:Container(
-                      width:30.w ,
-                      height: 15.h,
+                      width:162.w ,
+                      height: 52.h,
                       child:Center(
-                        child:  Text("data",
-                      style: TextStyle(color: Colors.white),),
-                      ),
+                        child:  Text("GET STARTED",
+                      style: Theme.of(context).textTheme.headlineMedium!.copyWith(
+                            fontWeight: FontWeight.w700,
+                            fontSize: 16.sp,
+                            color: Colors.white
+                          ),
+                      ),),
                       decoration: BoxDecoration(
-                        color: Color.fromARGB(31, 208, 208, 208),
+                        color: const Color.fromARGB(57, 255, 255, 255),
                         borderRadius: BorderRadius.circular(30)
                       ),
 

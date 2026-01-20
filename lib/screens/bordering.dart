@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:note_app/widgets/started_button.dart';
 
 class BorderingScreen extends StatelessWidget {
@@ -25,15 +26,14 @@ class BorderingScreen extends StatelessWidget {
               child: Column(
                 children: [
                   const SizedBox(height: 40),
-                  const Text(
+                   Text(
                     'i.click',
                     textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 42,
-                      fontFamily: 'Circular Std',
-                      fontWeight: FontWeight.w700,
-                      color: Colors.white,
-                    ),
+                    style: Theme.of(context).textTheme.headlineMedium!.copyWith(
+                            fontWeight: FontWeight.w600,
+                            fontSize: 42.sp,
+                            color: Colors.white
+                          ),
                   ),
                   SizedBox(height: size.height*.05,),
                 Image.asset(
@@ -50,7 +50,7 @@ class BorderingScreen extends StatelessWidget {
                       color: Colors.white,
                     ),
                   ),
-                SizedBox(height: size.height*.01,),
+                SizedBox(height:30.h,),
                 StatrtedButton()
                   
                 ],

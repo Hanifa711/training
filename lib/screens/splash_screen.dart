@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -65,7 +66,8 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
                     textAlign: TextAlign.center,
                     style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                             fontWeight: FontWeight.w600,
-                            fontSize: 22,
+                            fontSize: 42.sp,
+                            color: Colors.white
                           ),
                     ),
                   SizedBox(height: size.height*.05,),
