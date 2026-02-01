@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../logic/validator.dart';
-import '../widgets/auth_text_field.dart';
-import '../widgets/gradient_button.dart';
+import '../widgets/auth/auth_text_field.dart';
+import '../widgets/buttons/gradient_button.dart';
 import '../theme/app_colors.dart';
 
 class SetNewPasswordScreen extends StatefulWidget {
@@ -130,8 +130,8 @@ class _SetNewPasswordScreenState extends State<SetNewPasswordScreen> {
                         text: 'Send',
                         onPressed: () {
                           if (_formKey.currentState!.validate()) {
-                             
-                          }
+                                Navigator.pushNamed(context, '/select_category'); 
+                          } 
                         },
                       ),
                               

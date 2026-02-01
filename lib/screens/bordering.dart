@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../widgets/started_button.dart';
+import '../widgets/buttons/started_button.dart';
 
 class BorderingScreen extends StatelessWidget {
   const BorderingScreen({super.key});

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:training/screens/home.dart';
+import 'package:training/screens/select_category.dart';
 import '../screens/bordering.dart';
 import '../screens/forget_password.dart';
 import '../screens/login_screen.dart';
@@ -27,16 +29,20 @@ class MyApp extends StatelessWidget {
         title: 'i.click',
        theme: ThemeData(
         textTheme: GoogleFonts.montserratTextTheme(),
+         floatingActionButtonTheme: const FloatingActionButtonThemeData(
+            shape: CircleBorder(), 
+  ),
       ),
         initialRoute: '/',
         routes: {
-        '/': (context) => const SplashScreen(),
+        '/': (context) => const HomeScreen(),
         '/bordering': (context) => const BorderingScreen(),
         '/sign_in': (context) => const LoginScreen(),
         '/sign_up': (context) => const SignUpScreen(),
         '/verify': (context) => const VerifyScreen(),
         '/forgetpassword': (context) => const  ForgetPasswordScreen(),
-        '/setnewpassword': (context) => const  SetNewPasswordScreen()
+        '/setnewpassword': (context) => const  SetNewPasswordScreen(),
+        '/select_category':(context)=>const SelectCategoryScreen()
 
         },
       );

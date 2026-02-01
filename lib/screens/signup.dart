@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../logic/validator.dart';
-import '../widgets/auth_text_field.dart';
-import '../widgets/gradient_button.dart';
+import '../widgets/auth/auth_text_field.dart';
+import '../widgets/buttons/gradient_button.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});

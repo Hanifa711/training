@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../logic/validator.dart';
-import '../widgets/auth_text_field.dart';
-import '../widgets/gradient_button.dart';
+import '../widgets/auth/auth_text_field.dart';
+import '../widgets/buttons/gradient_button.dart';
 import '../theme/app_colors.dart';
 
 class VerifyScreen extends StatefulWidget {
@@ -82,7 +82,9 @@ class _VerifyScreenState extends State<VerifyScreen> {
                       ),
                       SizedBox(height: 20.h),
                       TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                           Navigator.pushNamed(context, '/select_category');
+                        },
                         child:  Text(
                           "Don't receive the code",
                           textAlign: TextAlign.center,
