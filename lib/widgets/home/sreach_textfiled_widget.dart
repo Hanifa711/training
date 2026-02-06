@@ -3,14 +3,16 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:training/theme/app_colors.dart';
 
 class SearchTextField extends StatelessWidget {
-  const SearchTextField({super.key});
+  final bool moveToSearch;
+  const SearchTextField({super.key, required this.moveToSearch});
 
   @override
   Widget build(BuildContext context) {
     return TextField(
       onTap: (){
-        
+        moveToSearch?Navigator.pushNamed(context, '/search'):null;
       },
+      readOnly: moveToSearch,
       decoration: InputDecoration(
         hintText: 'Search',
         hintStyle: TextStyle(

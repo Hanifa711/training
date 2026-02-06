@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:training/screens/home.dart';
+import 'package:training/screens/challenge_screen.dart';
+import 'package:training/screens/home_bottom_bar.dart';
+import 'package:training/screens/search.dart';
 import 'package:training/screens/select_category.dart';
 import '../screens/bordering.dart';
 import '../screens/forget_password.dart';
@@ -43,7 +45,10 @@ class MyApp extends StatelessWidget {
         '/forgetpassword': (context) => const  ForgetPasswordScreen(),
         '/setnewpassword': (context) => const  SetNewPasswordScreen(),
         '/select_category':(context)=>const SelectCategoryScreen(),
-        '/home':(context)=>const HomeScreen()
+        '/home':(context)=>const HomeBottomBar(),
+        '/search':(context)=>const SearchScreen(),
+        'challenge':(context)=>const ChallengeScreen(),
+
 
         },
       );

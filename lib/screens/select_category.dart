@@ -1,12 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:training/data.dart';
 import 'package:training/widgets/category/category_card_widget.dart';
 import 'package:training/widgets/category/header_widget.dart';
 
-class SelectCategoryScreen extends StatelessWidget {
+class SelectCategoryScreen extends StatefulWidget {
+  
   const SelectCategoryScreen({super.key});
 
   @override
+  State<SelectCategoryScreen> createState() => _SelectCategoryScreenState();
+}
+
+class _SelectCategoryScreenState extends State<SelectCategoryScreen> {
+  @override
   Widget build(BuildContext context) {
+    int selectedIndex = 0; 
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
@@ -25,29 +33,26 @@ class SelectCategoryScreen extends StatelessWidget {
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: GridView.count(
-                  crossAxisCount: 2,
-                  mainAxisSpacing: 16,
-                  crossAxisSpacing: 16,
-                  childAspectRatio: 0.85,
-                  children: const [
-                    CategoryCard(
-                      title: 'Photographer',
-                      imagePath: 'assets/images/ph.png',
-                    ),
-                    CategoryCard(
-                      title: 'Video Creator',
-                      imagePath: 'assets/images/video.png',
-                    ),
-                    CategoryCard(
-                      title: 'Illustrator',
-                      imagePath: 'assets/images/illus.png',
-                    ),
-                    CategoryCard(
-                      title: 'Designer',
-                      imagePath: 'assets/images/design.png',
-                    ),
-                  ],
+                child: GridView.builder(
+                  itemCount: CategoryList.length,
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    crossAxisSpacing: 16,
+                    mainAxisSpacing: 16,
+                    childAspectRatio: 0.85
+                  ),
+                  itemBuilder: (context, index) {
+                    return CategoryCard(
+                      title: CategoryList[index].title, 
+                      imagePath: CategoryList[index].imagePath,
+                      isSelected: selectedIndex==index, 
+                      onTap: () {
+                      setState(() {
+                        selectedIndex = index;
+                      });
+                    },);
+                  },
+                  
                 ),
               ),
             ),

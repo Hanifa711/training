@@ -4,7 +4,8 @@ import 'package:training/theme/app_colors.dart';
 import 'package:training/widgets/home/sreach_textfiled_widget.dart';
 
 class MySearchBar extends StatelessWidget {
-  const MySearchBar();
+   final bool moveToSearch;
+  const MySearchBar(this.moveToSearch);
 
   @override
   Widget build(BuildContext context) {
@@ -17,8 +18,13 @@ class MySearchBar extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: Row(
           children: [
-           Expanded(child: SearchTextField()),
+           Expanded(child: SearchTextField(
+            moveToSearch: moveToSearch,
+           )),
              SizedBox(width: 10.w),
+            !moveToSearch?
+            Text("cancel")
+            : 
             Container(
               height: 48.h,
               width: 48.w,
