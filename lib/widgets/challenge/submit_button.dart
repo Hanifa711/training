@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:training/l10n/app_localizations.dart';
 
 class SubmitButton extends StatelessWidget {
   const SubmitButton();
@@ -18,8 +19,8 @@ class SubmitButton extends StatelessWidget {
             ),
           ),
           onPressed: () {},
-          child: const Text(
-            'SUBMIT YOUR SHOT',
+          child:Text(
+           AppLocalizations.of(context)!.submitshot,
             style: TextStyle(
               letterSpacing: 1.2,
               fontWeight: FontWeight.w600,

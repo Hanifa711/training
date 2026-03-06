@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:training/l10n/app_localizations.dart';
 import 'package:training/theme/app_colors.dart';
 import 'package:training/widgets/home/sreach_textfiled_widget.dart';
 
@@ -23,7 +24,10 @@ class MySearchBar extends StatelessWidget {
            )),
              SizedBox(width: 10.w),
             !moveToSearch?
-            Text("cancel")
+            TextButton(
+              child:Text(AppLocalizations.of(context)!.cancel) ,
+              onPressed:()=>Navigator.pushNamed(context, '/home') ,
+              )
             : 
             Container(
               height: 48.h,

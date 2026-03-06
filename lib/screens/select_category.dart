@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:training/data.dart';
+import 'package:training/l10n/app_localizations.dart';
 import 'package:training/widgets/category/category_card_widget.dart';
 import 'package:training/widgets/category/header_widget.dart';
 
@@ -22,8 +23,8 @@ class _SelectCategoryScreenState extends State<SelectCategoryScreen> {
           children: [
             const Header(),
             const SizedBox(height: 24),
-            const Text(
-              'Who are you?',
+             Text(
+              AppLocalizations.of(context)!.whoareyou,
               style: TextStyle(
                 fontSize: 26,
                 fontWeight: FontWeight.bold,
@@ -57,8 +58,8 @@ class _SelectCategoryScreenState extends State<SelectCategoryScreen> {
               ),
             ),
             const SizedBox(height: 12),
-            const Text(
-              'SHARE - INSPIRE - CONNECT',
+             Text(
+               AppLocalizations.of(context)!.welmsg,
               style: TextStyle(
                 color: Color(0xFF6C6CF5),
                 letterSpacing: 2,
@@ -79,8 +80,8 @@ class _SelectCategoryScreenState extends State<SelectCategoryScreen> {
                   onPressed: () {
                      Navigator.pushNamed(context, '/home');
                   },
-                  child: const Text(
-                    'EXPLORE NOW',
+                  child:  Text(
+                    AppLocalizations.of(context)!.explorenow,
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,

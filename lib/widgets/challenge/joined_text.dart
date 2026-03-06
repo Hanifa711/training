@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:training/l10n/app_localizations.dart';
 import 'package:training/theme/app_colors.dart';
 
 class JoinedText extends StatelessWidget {
@@ -19,7 +20,7 @@ class JoinedText extends StatelessWidget {
             ),
           ),
           Text(
-            ' people have joined this challenge',
+           AppLocalizations.of(context)!.jointext,
             style: TextStyle(
               fontSize: 12,
               color: Colors.grey.shade600,

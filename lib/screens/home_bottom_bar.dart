@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:training/screens/challenge_screen.dart';
 import 'package:training/screens/discover.dart';
 import 'package:training/screens/home.dart';
 import 'package:training/theme/app_colors.dart';
@@ -18,7 +19,7 @@ class _HomeBottomBarState extends State<HomeBottomBar> {
   final List<Widget> _pages = const [
     HomePage(),
     DiscoverScreen(),
-    // NotificationsScreen(),
+    ChallengeScreen(),
     // ProfileScreen(),
   ];
  

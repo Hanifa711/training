@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:training/l10n/app_localizations.dart';
 import '../logic/validator.dart';
 import '../widgets/auth/auth_text_field.dart';
 import '../widgets/buttons/gradient_button.dart';
@@ -52,7 +53,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     children: [
                       SizedBox(height:40.h,),
                       AuthTextField(
-                        hint: 'Email',
+                        hint: AppLocalizations.of(context)!.email,
                         controller: _emailController,
                         keyboardType: TextInputType.emailAddress,
                         validator: Validators.email,
@@ -60,7 +61,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       SizedBox(height: 20.h),
                               
                       AuthTextField(
-                        hint: 'Password',
+                        hint: AppLocalizations.of(context)!.password,
                         controller: _passwordController,
                         isPassword: !_showPassword,
                         validator:Validators.password,
@@ -86,7 +87,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           
                         },
                         child:  Text(
-                          'FORGOT PASSWORD',
+                          AppLocalizations.of(context)!.forgetpassword,
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             color: AppColors.primary,
@@ -99,7 +100,7 @@ class _LoginScreenState extends State<LoginScreen> {
                        SizedBox(height: 30.h),
                               
                       GradientButton(
-                        text: 'LOG IN',
+                        text:AppLocalizations.of(context)!.login,
                         onPressed: () {
                           if (_formKey.currentState!.validate()) {
                            Navigator.pushNamed(context, '/home');
@@ -109,7 +110,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               
                       SizedBox(height: 40.h),
                               
-                      const Text('OR LOG IN BY'),
+                      Text(AppLocalizations.of(context)!.loginby),
                               
                       const SizedBox(height: 15),
                               
@@ -127,13 +128,13 @@ class _LoginScreenState extends State<LoginScreen> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          const Text("Don't have account? "),
+                           Text(AppLocalizations.of(context)!.noaccount),
                           TextButton(
                             onPressed: () {
                               Navigator.pushNamed(context, '/sign_up');
                             },
-                            child: const Text(
-                              'SIGN UP',
+                            child:  Text(
+                              AppLocalizations.of(context)!.signup,
                               style: TextStyle(fontWeight: FontWeight.bold),
                             ),
                           )

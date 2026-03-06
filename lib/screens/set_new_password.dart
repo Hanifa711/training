@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:training/l10n/app_localizations.dart';
 import '../logic/validator.dart';
 import '../widgets/auth/auth_text_field.dart';
 import '../widgets/buttons/gradient_button.dart';
@@ -53,7 +54,7 @@ class _SetNewPasswordScreenState extends State<SetNewPasswordScreen> {
                   child: Column(
                     children: [
                       SizedBox(height:20.h,),
-                      Text("SET NEW PASSWORD",
+                      Text(AppLocalizations.of(context)!.setnewpassword,
                       style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                             fontWeight: FontWeight.bold,
                             fontSize: 16.sp,
@@ -68,7 +69,7 @@ class _SetNewPasswordScreenState extends State<SetNewPasswordScreen> {
                           borderRadius: BorderRadius.circular(12.sp)
                         ),
                         child: Center(
-                          child: Text("Type your new password",
+                          child: Text(AppLocalizations.of(context)!.typepassword,
                             textAlign: TextAlign.center,
                             style:Theme.of(context).textTheme.headlineMedium!.copyWith(
                             fontWeight: FontWeight.w500,
@@ -80,7 +81,7 @@ class _SetNewPasswordScreenState extends State<SetNewPasswordScreen> {
                       ),
                       SizedBox(height:40.h,),
                       AuthTextField(
-                        hint: 'Password',
+                        hint: AppLocalizations.of(context)!.password,
                         controller: _passwordController,
                         isPassword: !_showPassword,
                         validator:Validators.password,
@@ -101,7 +102,7 @@ class _SetNewPasswordScreenState extends State<SetNewPasswordScreen> {
                       SizedBox(height:20.h,),
 
                        AuthTextField(
-                        hint: 'Confirm Password',
+                        hint:AppLocalizations.of(context)!.confpassword,
                         controller: _confirmpasswordController,
                         isPassword: !_showconfirmPassword,
                         validator:(value) {
@@ -127,7 +128,7 @@ class _SetNewPasswordScreenState extends State<SetNewPasswordScreen> {
                        SizedBox(height: 40.h),
                               
                       GradientButton(
-                        text: 'Send',
+                        text: AppLocalizations.of(context)!.send,
                         onPressed: () {
                           if (_formKey.currentState!.validate()) {
                                 Navigator.pushNamed(context, '/select_category'); 

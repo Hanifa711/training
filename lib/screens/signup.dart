@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:training/l10n/app_localizations.dart';
 import '../logic/validator.dart';
 import '../widgets/auth/auth_text_field.dart';
 import '../widgets/buttons/gradient_button.dart';
@@ -51,7 +52,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     children: [
                       SizedBox(height:40.h,),
                       AuthTextField(
-                        hint: 'Email',
+                        hint: AppLocalizations.of(context)!.email,
                         controller: _emailController,
                         keyboardType: TextInputType.emailAddress,
                         validator: Validators.email,
@@ -59,7 +60,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       SizedBox(height: 20.h),
                               
                       AuthTextField(
-                        hint: 'Password',
+                        hint: AppLocalizations.of(context)!.password,
                         controller: _passwordController,
                         isPassword: !_showPassword,
                         validator:Validators.password,
@@ -80,7 +81,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       SizedBox(height: 100.h),
                               
                       GradientButton(
-                        text: 'SIGN IN',
+                        text: AppLocalizations.of(context)!.signup,
                         onPressed: () {
                           if (_formKey.currentState!.validate()) {
                            Navigator.pushNamed(context, '/verify');
@@ -94,14 +95,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          const Text("You have account? "),
+                          Text(AppLocalizations.of(context)!.hasaccount),
                           TextButton(
                             onPressed: () {
                                Navigator.pushNamed(context, '/sign_in');
 
                             },
-                            child: const Text(
-                              'LOG IN',
+                            child:  Text(
+                             AppLocalizations.of(context)!.login,
                               style: TextStyle(fontWeight: FontWeight.bold),
                             ),
                           )

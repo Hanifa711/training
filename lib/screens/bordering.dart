@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:training/l10n/app_localizations.dart';
 import '../widgets/buttons/started_button.dart';
 
 class BorderingScreen extends StatelessWidget {
@@ -41,8 +42,8 @@ class BorderingScreen extends StatelessWidget {
            fit: BoxFit.cover,
          ),
          SizedBox(height: size.height*.02,),
-          Text(
-                    'SHARE - INSPIRE - CONNECT',
+          Text(AppLocalizations.of(context)!.welmsg,
+                    // 'SHARE - INSPIRE - CONNECT',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 14.sp,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:training/l10n/app_localizations.dart';
 import '../logic/validator.dart';
 import '../widgets/auth/auth_text_field.dart';
 import '../widgets/buttons/gradient_button.dart';
@@ -48,7 +49,7 @@ class _VerifyScreenState extends State<VerifyScreen> {
                   child: Column(
                     children: [
                       SizedBox(height:20.h,),
-                      Text("VERIFICATION",
+                      Text(AppLocalizations.of(context)!.verfication,
                       style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                             fontWeight: FontWeight.bold,
                             fontSize: 16.sp,
@@ -63,7 +64,8 @@ class _VerifyScreenState extends State<VerifyScreen> {
                           borderRadius: BorderRadius.circular(12.sp)
                         ),
                         child: Center(
-                          child: Text("A message with verification code was sent to your mobile phone.",
+                          child: Text(AppLocalizations.of(context)!.verifymsg
+                           ,
                             textAlign: TextAlign.center,
                             style:Theme.of(context).textTheme.headlineMedium!.copyWith(
                             fontWeight: FontWeight.w500,
@@ -75,7 +77,7 @@ class _VerifyScreenState extends State<VerifyScreen> {
                       ),
                       SizedBox(height:40.h,),
                       AuthTextField(
-                        hint: 'Type verification code',
+                        hint: AppLocalizations.of(context)!.typeverificationcode,
                         controller: _emailController,
                         keyboardType: TextInputType.emailAddress,
                         validator:Validators.notEmpty,
@@ -86,7 +88,7 @@ class _VerifyScreenState extends State<VerifyScreen> {
                            Navigator.pushNamed(context, '/select_category');
                         },
                         child:  Text(
-                          "Don't receive the code",
+                         AppLocalizations.of(context)!.nocode ,
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             color: AppColors.black,
@@ -99,10 +101,10 @@ class _VerifyScreenState extends State<VerifyScreen> {
                        SizedBox(height: 30.h),
                               
                       GradientButton(
-                        text: 'VERIFY',
+                        text: AppLocalizations.of(context)!.verify,
                         onPressed: () {
                           if (_formKey.currentState!.validate()) {
-                           
+                               Navigator.pushNamed(context, '/select_category');
                           }
                         },
                       ),

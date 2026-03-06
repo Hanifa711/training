@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:training/data.dart';
+import 'package:training/l10n/app_localizations.dart';
 import 'package:training/widgets/home/section_widget.dart';
 
 class DiscoverScreen extends StatelessWidget {
@@ -16,24 +17,24 @@ class DiscoverScreen extends StatelessWidget {
                  SliverToBoxAdapter(
                   child: Section(
                     height: 150.h,
-                    title: 'Topic',
-                    subtitle: 'View more',
+                    title:AppLocalizations.of(context)!.topic ,
+                    subtitle:AppLocalizations.of(context)!.viewmore,
                     items:DiscoverTopicsList
                   ),
                 ),
                  SliverToBoxAdapter(
                   child: Section(
                     height: 200.h,
-                    title: 'Collection',
-                    subtitle: 'View more',
+                    title:AppLocalizations.of(context)!.collection,
+                    subtitle:AppLocalizations.of(context)!.viewmore,
                     items: DiscoverCollectionList
                   ),
                 ),
                  SliverToBoxAdapter(
                   child: Section(
                     height: 200.h,
-                    title: 'Collection',
-                    subtitle: 'View more',
+                    title: AppLocalizations.of(context)!.collection,
+                    subtitle: AppLocalizations.of(context)!.viewmore,
                     items:DiscoverCollectionList
                   ),
                 ),

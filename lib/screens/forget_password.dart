@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:training/l10n/app_localizations.dart';
 import '../logic/validator.dart';
 import '../widgets/auth/auth_text_field.dart';
 import '../widgets/buttons/gradient_button.dart';
@@ -48,7 +49,8 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
                   child: Column(
                     children: [
                       SizedBox(height:20.h,),
-                      Text("TYPE YOUR EMAIL",
+                      Text(AppLocalizations.of(context)!.typeemail,
+                      
                       style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                             fontWeight: FontWeight.bold,
                             fontSize: 16.sp,
@@ -63,7 +65,9 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
                           borderRadius: BorderRadius.circular(12.sp)
                         ),
                         child: Center(
-                          child: Text("We will send you instruction on how to reset your password",
+                          child: Text(AppLocalizations.of(context)!.resetpasswordmsg
+                            
+                           ,
                             textAlign: TextAlign.center,
                             style:Theme.of(context).textTheme.headlineMedium!.copyWith(
                             fontWeight: FontWeight.w500,
@@ -75,7 +79,7 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
                       ),
                       SizedBox(height:40.h,),
                       AuthTextField(
-                        hint: 'Email',
+                        hint:AppLocalizations.of(context)!.email ,
                         controller: _emailController,
                         keyboardType: TextInputType.emailAddress,
                         validator:Validators.email,
@@ -84,7 +88,7 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
                        SizedBox(height: 50.h),
                               
                       GradientButton(
-                        text: 'Send',
+                        text:AppLocalizations.of(context)!.send,
                         onPressed: () {
                           if (_formKey.currentState!.validate()) {
                            Navigator.pushNamed(context, '/setnewpassword');

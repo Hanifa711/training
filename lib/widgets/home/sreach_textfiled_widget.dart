@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:training/l10n/app_localizations.dart';
 import 'package:training/theme/app_colors.dart';
 
 class SearchTextField extends StatelessWidget {
@@ -14,7 +15,7 @@ class SearchTextField extends StatelessWidget {
       },
       readOnly: moveToSearch,
       decoration: InputDecoration(
-        hintText: 'Search',
+        hintText: AppLocalizations.of(context)!.search ,
         hintStyle: TextStyle(
           color: Colors.grey,
           fontSize: 14.sp,

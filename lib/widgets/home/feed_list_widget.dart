@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:training/l10n/app_localizations.dart';
 import 'package:training/widgets/home/post_card_widget.dart';
 
 class FeedList extends StatelessWidget {
@@ -8,11 +9,11 @@ class FeedList extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       padding: const EdgeInsets.all(16),
-      children: const [
+      children:  [
         PostCard(
           avatar: 'assets/images/avatar1.png',
           name: 'Thanh Pham',
-          time: '1 hour ago',
+          time: '1 ${AppLocalizations.of(context)!.hourago}',
           image: 'assets/images/post1.png',
           comments: 20,
           likes: 125,
@@ -21,7 +22,7 @@ class FeedList extends StatelessWidget {
         PostCard(
           avatar: 'assets/images/avatar2.png',
           name: 'Bruno',
-          time: '1 hour ago',
+          time: '1 ${AppLocalizations.of(context)!.hourago}',
           image: 'assets/images/post2.png',
           comments: 8,
           likes: 64,

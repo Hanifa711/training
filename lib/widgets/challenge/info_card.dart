@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:training/l10n/app_localizations.dart';
 
 class ChallengeInfo extends StatelessWidget {
   const ChallengeInfo();
@@ -16,9 +17,9 @@ class ChallengeInfo extends StatelessWidget {
           Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children:  [
-              _InfoItem(title: 'Deadline', value: '30 days left'),
+              _InfoItem(title:AppLocalizations.of(context)!.deadline, value: '30 ${AppLocalizations.of(context)!.dayleft}'),
                SizedBox(height: 16.h),
-              _InfoItem(title: 'Prize', value: '\$100.00'),
+              _InfoItem(title:AppLocalizations.of(context)!.prize , value: '\$100.00'),
             ],
           ),
         ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:training/l10n/app_localizations.dart';
 import 'package:training/widgets/home/tab_item.dart';
 
 class MyTabBar extends StatelessWidget {
@@ -18,18 +19,18 @@ class MyTabBar extends StatelessWidget {
       padding: const EdgeInsets.all(8),
       child: Row(
         children: [
-          TabItem(
-            title: 'Popular',
+           TabItem(
+            title:AppLocalizations.of(context)!.popular,
             selected: selectedIndex == 0,
             onTap: () => onTabSelected(0),
           ),
           TabItem(
-            title: 'Trending',
+            title:AppLocalizations.of(context)!.trending,
             selected: selectedIndex == 1,
             onTap: () => onTabSelected(1),
           ),
           TabItem(
-            title: 'Following',
+            title:AppLocalizations.of(context)!.follow ,
             selected: selectedIndex == 2,
             onTap: () => onTabSelected(2),
           ),

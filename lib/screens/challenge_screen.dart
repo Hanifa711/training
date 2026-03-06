@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:training/l10n/app_localizations.dart';
 import 'package:training/theme/app_colors.dart';
 import 'package:training/widgets/buttons/gradient_button.dart';
 import 'package:training/widgets/challenge/description_text.dart';
@@ -26,26 +27,26 @@ class ChallengeScreen extends StatelessWidget {
               SizedBox(height: 16.h),
               ChallengeInfo(),
               SizedBox(height: 6.h),
-              Text("Ready to win this challenge",
+              Text(AppLocalizations.of(context)!.challengemsg,
               style: TextStyle(
                 color: AppColors.primary,
                 fontSize: 17.sp,
               ),
               ),
               SizedBox(height: 24.h),
-              GradientButton(onPressed:(){},text: "SUBMIT YOUR SHOT",),
+              GradientButton(onPressed:(){},text:AppLocalizations.of(context)!.submitshot,),
               SizedBox(height: 16.h),
               JoinedText(),
               SizedBox(height: 32.h),
-              SectionTitle(title: 'Challenge'),
+              SectionTitle(title:AppLocalizations.of(context)!.challenge),
               SizedBox(height: 12.h),
               DescriptionText(),
               SizedBox(height: 32.h),
-              SectionTitle(title: 'Inspiration'),
+              SectionTitle(title:AppLocalizations.of(context)!.inspiration),
               SizedBox(height: 12.h),
               InspirationImages('assets/images/blackman.png','assets/images/blacklady.png'),
               SizedBox(height: 32.h),
-               SectionTitle(title: 'Trending'),
+               SectionTitle(title:AppLocalizations.of(context)!.trending),
               SizedBox(height: 12.h),
               InspirationImages('assets/images/lady.png','assets/images/lady.png'),
               SizedBox(height: 32.h),

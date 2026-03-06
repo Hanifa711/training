@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:training/l10n/app_localizations.dart';
 
 class StatrtedButton extends StatelessWidget {
   const StatrtedButton({super.key});
@@ -14,7 +15,7 @@ class StatrtedButton extends StatelessWidget {
                       width:162.w ,
                       height: 52.h,
                       child:Center(
-                        child:  Text("GET STARTED",
+                        child:  Text(AppLocalizations.of(context)!.get_started,
                       style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                             fontWeight: FontWeight.w700,
                             fontSize: 16.sp,
